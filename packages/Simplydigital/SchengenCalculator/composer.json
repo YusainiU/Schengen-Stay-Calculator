@@ -1,0 +1,39 @@
+
+{
+    "name": "simply-digital/schengen-stay-calculator",
+    "description": "A Laravel package for calculating Schengen 90/180 day travel allowances.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "illuminate/support": "^13.0",
+        "illuminate/database": "^13.0",
+        "nesbot/carbon": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^11.0",
+        "phpunit/phpunit": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Simplydigital\\SchengenCalculator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Simplydigital\\SchengenCalculator\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Simplydigital\\SchengenCalculator\\SchengenServiceProvider"
+            ],
+            "aliases": {
+                "Schengen": "Simplydigital\\SchengenCalculator\\Facades\\Schengen"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
